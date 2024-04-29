@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+   
+<head>
+    <title>Printing</title>
+    <!-- Modifique el height del header y footer para adaptar el formato según las características del membrete del cliente. -->
+    <style>
+        .header, .header-space {
+          height: 100px;
+        }
+        .footer, .footer-space {
+          height: 100px;
+        }
+        .header {
+          position: fixed;
+          top: 0;
+        }
+        .footer {
+          position: fixed;
+          bottom: 0;
+        }
+    </style>
+</head>
+    
+<body>
+    <table>
+      <thead><tr><td>
+        <div class="header-space">
+        </div>
+      </td></tr></thead>
+      <tbody><tr><td>
+        <div class="content">
+			<p align=justify>CONTENIDO</p>
+        </div>
+      </td></tr></tbody>
+      <tfoot><tr><td align=center>
+        <div class="footer-space">
+        </div>
+      </td></tr></tfoot>
+    </table>
+    <!-- Incluya en el siguiente div todo lo que desea utilizar como encabezado de cada página -->
+    <!-- Include in the next div all you want to use as header -->
+    <div class="header">
+		ENCABEZADO
+    </div>
+    <!-- Incluya en el siguiente div todo lo que desea utilizar como pie de cada página -->
+	<!-- Include in the next div all you want to use as footer -->
+    <div class="footer">
+		PIE DE PÁGINA
+     </div>
+  
+    <script type="text/javascript">
+        if (navigator.userAgent.match(/.*(chrome).*/i)) {
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) {
+                    window.close();
+                }
+            });
+        }
+        window.print();
+    </script>
+
+  
+</body>
+    
+</html>
